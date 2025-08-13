@@ -1,0 +1,64 @@
+/* Container for the entire page */
+.dopamine-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  font-family: sans-serif;
+  color: #333;
+}
+
+/* Header styling */
+  /* Header styling */
+.dopamine-header {
+  text-align: center;
+  margin-top: 3rem; /* Pushes the header down from the very top */
+  margin-bottom: 2rem;
+  position: relative;
+  /* Adjust this value to control how far down it appears */
+  z-index: 10; /* Ensures the header is above other content if needed */
+}
+
+
+/* About section styling */
+.dopamine-about {
+  width: 80%;
+  max-width: 800px;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Container for the two small divs */
+.dopamine-small-divs-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem; /* Space between the divs */
+  width: 100%;
+}
+
+/* Styling for the small divs */
+.dopamine-small-div {
+  flex: 1; /* Allows them to grow and take equal space */
+  max-width: 300px;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: #f0f0f0;
+}
+
+/* Hover/tap effect */
+.dopamine-small-div:hover,
+.dopamine-small-div:active {
+  background-color: #007bff; /* Change to your desired highlight color */
+  color: white;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .dopamine-small-divs-container {
+    flex-direction: column; /* Stacks divs vertically */
+    align-items: center;
+  }
+}
